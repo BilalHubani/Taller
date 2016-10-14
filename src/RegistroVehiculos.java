@@ -20,8 +20,14 @@ public class RegistroVehiculos {
     }
 
     public void eliminarVehiculo(String matricula){
-        if (coches.contains(matricula)){
-            coches.remove(matricula);
+        Coche borrar = null;
+        for (Coche obtener: coches) {
+            if (obtener.getMatricula().equals(matricula)) {
+                borrar = obtener;
+            }
+        }
+        if (borrar != null) {
+            coches.remove(borrar);
         }
     }
 

@@ -30,7 +30,7 @@ public class MainVehiculos {
                 );
 
         registro
-                .obtenerVehiculoPrecioMax();
+                .obtenerVehiculoPrecioMax()
                                                // esta expresión es equivalente a verificar diferente de null con Java 8
                                                .ifPresent(
                                                        coche -> System.out.println("Coche Max precio: " + coche)
