@@ -29,12 +29,7 @@ public class MainVehiculos {
                         coche -> System.out.println("Coche Lexus: " + coche)
                 );
 
-        registro
-                .obtenerVehiculoPrecioMax()
-                                               // esta expresión es equivalente a verificar diferente de null con Java 8
-                                               .ifPresent(
-                                                       coche -> System.out.println("Coche Max precio: " + coche)
-                                               );
+        System.out.println("Coche Max precio: "+ registro.obtenerVehiculoPrecioMax());
 
         System.out.println("Eliminando coche con matricula 1234ENG");
         registro

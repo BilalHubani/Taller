@@ -32,7 +32,15 @@ public class RegistroVehiculos {
     }
 
     public Coche obtenerVehiculoPrecioMax(){
-        return null;
+        Coche max = null;
+        double maximo = 0;
+        for (Coche obtener:coches) {
+            if (obtener.getPrecio()>maximo){
+                max = obtener;
+                maximo = obtener.getPrecio();
+            }
+        }
+        return max;
     }
 
     public List<Coche> obtenerVehiculosMarca(String marca){
@@ -45,6 +53,10 @@ public class RegistroVehiculos {
 
     }
     public List<Coche> obtenerTodos(){
-return null;
+        List <Coche> todos = new ArrayList<Coche>();
+        for (Coche obtener : coches){
+            todos.add(obtener);
+        }
+        return todos;
     }
 }
